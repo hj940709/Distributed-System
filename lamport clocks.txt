@@ -1,0 +1,19 @@
+lamport clocks
+
+	happened before
+		same computer: a -> b ---the local clock,time never backwards
+		2 computers
+			messages: send->receive
+
+	alogrithm:
+		timestamp t;
+		local event: t++ or t+=x
+		sender: M(t), send message with the timestamp, t++
+		receiver: M(t') and t, take t'=max(t,t')+1
+
+
+A:1,2,3,4,5,6(send message to B)...19,20,21(receive message from B)
+B:1, , , , , ,7(receive message from B),8,9,10(send message to A)
+
+a -> B => L(a)<L(b),a's timestamp is smaller than b's
+ however L(a)<L(b) may not mean anything

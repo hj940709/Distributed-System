@@ -1,0 +1,14 @@
+Role:
+	Coordinator
+	Nodes:A,B,C
+
+Phase 1:
+	Coordinator send a "prepare" message to every node
+	Nodes will send back ok
+
+Phase 2:
+	Coordinator commits
+	Nodes ack
+
+One node failed in either phase, coordinator will send rollback
+

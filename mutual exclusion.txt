@@ -1,0 +1,14 @@
+guarantee only one user can access to resources
+
+
+Ricart-agrawala
+nodes all runs lamport clock
+node sends a message to ask if others need to access the resources
+	if receives ok from all, go ahead.
+	if not, compare the timestamp
+		if there are same timestamp, compare the PID(node id in the system)
+if one is using the resource, it will delay it ack message
+
+Safety:If one node want to use the resources, it has to collect n-1 ack
+Liveness:The comparison of PID 
+Fairness:timestamps comparison

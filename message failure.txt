@@ -1,0 +1,33 @@
+Alice Bod negociate to have a lunch
+
+Alice     Bob
+SYN	
+	  Ack
+Ack
+	  Ack
+     ....
+
+
+Byzatune Failure
+Assume 3 is down
+Four node send their own id
+1:1 2 x 4
+2:1 2 y 4
+3:1 2 3 4
+4:1 2 z 4
+
+Send node's own vector
+1:
+12y4
+abcd
+12z4
+2:
+12x4
+efgh
+12z4
+4:
+12x4
+12y4
+ijkl
+
+n>=3f+1 (n-the number of all nodes, f-the number of failure nodes)
